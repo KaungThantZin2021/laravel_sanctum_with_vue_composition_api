@@ -11,13 +11,8 @@ export default function useAuth() {
     const getAuthenticated = () => computed(() => state.authenticated);
     const getUser = () => computed(() => state.user);
 
-    const setAuthenticated = (authenticated) => {
-        state.authenticated = authenticated;
-    }
-
-    const setUser = (user) => {
-        state.user = user;
-    }
+    const setAuthenticated = (authenticated) => state.authenticated = authenticated;
+    const setUser = (user) => state.user = user;
 
 
     const attempt = async () => {
@@ -47,6 +42,7 @@ export default function useAuth() {
     return {
         login,
         getAuthenticated,
-        getUser
+        getUser,
+        attempt
     }
 }

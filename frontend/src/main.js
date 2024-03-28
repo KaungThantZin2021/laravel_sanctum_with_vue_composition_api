@@ -10,6 +10,13 @@ axios.defaults.baseURL= 'http://localhost:8000';
 axios.defaults.withCredentials = true;
 axios.defaults.withXSRFToken = true;
 
+import useAuth from './auth/useAuth';
+
+const { attempt } = useAuth();
+
 const app = createApp(App);
 app.use(router);
-app.mount('#app');
+
+attempt().then(() => {
+    app.mount('#app');
+});

@@ -46,7 +46,7 @@
 
 <script setup>
 import { reactive } from 'vue';
-import useAuth from '../../auth/useAuth.js';
+import useAuth from '../../auth/useAuth';
 
 const { login, getUser, getAuthenticated } = useAuth();
 
