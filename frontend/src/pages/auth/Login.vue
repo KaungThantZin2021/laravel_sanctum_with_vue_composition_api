@@ -1,5 +1,8 @@
 <template>
     <h1 class="text-xl font-medium text-center">Login</h1>
+    {{ getUser() }}
+    <br>
+    {{ getAuthenticated() }}
     <form @submit.prevent="login(form)">
         <div class="mb-3">
             <label for="email" class="leading-7 text-sm text-gray-600"
@@ -45,7 +48,7 @@
 import { reactive } from 'vue';
 import useAuth from '../../auth/useAuth.js';
 
-const { login } = useAuth();
+const { login, getUser, getAuthenticated } = useAuth();
 
 const form = reactive({
     email: "",
