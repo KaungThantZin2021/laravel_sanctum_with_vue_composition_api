@@ -1,7 +1,6 @@
 <template>
     <div class="text-center">
-        <h1 class="text-xl font-medium">A</h1>
-        <p>a@gmail.com</p>
+        <h1 class="text-xl font-medium">Dashboard</h1>
     </div>
 </template>
 <script setup></script>
